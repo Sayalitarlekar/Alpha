@@ -2,11 +2,15 @@ package helloworld;
 
 interface Dog {
 	void getcolour();
+}
+
+abstract class cat{
    abstract void makesound();
+  
 	}
 
 
-class Toys implements Dog{
+class Toys extends cat implements Dog {
 	public void getcolour()
 	{
 		System.out.println("My colour is black");
@@ -17,9 +21,9 @@ class Toys implements Dog{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Toys a1=new Toys();
+		Dog a1=new Toys();
 		a1.getcolour();
-		Toys a2=new Toys();
+		cat a2=new Toys();
 		a2.makesound();
 	}
 	}

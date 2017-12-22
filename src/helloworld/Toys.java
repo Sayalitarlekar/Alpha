@@ -4,13 +4,13 @@ interface Dog {
 	void getcolour();
 }
 
-abstract class cat{
+abstract class Cat implements Dog {
    abstract void makesound();
   
 	}
 
 
-class Toys extends cat implements Dog {
+class Toys extends Cat {
 	public void getcolour()
 	{
 		System.out.println("My colour is black");
@@ -21,10 +21,9 @@ class Toys extends cat implements Dog {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Dog a1=new Toys();
-		a1.getcolour();
-		cat a2=new Toys();
-		a2.makesound();
+		Cat a1=new Toys();
+		a1.getcolour();	
+		a1.makesound();
 	}
 	}
 
